@@ -66,7 +66,7 @@ let { promisify } = require("util");
             .pipe(fs.createWriteStream("bake1.zip"))
             .on("finish", function() {
               fs.unlink("back.zip", function(err, res) {
-                fs.rename("bake1.zip", "bake.zip", function() {});
+                fs.rename("bake1.zip", "patch.zip", function() {});
               });
             });
         });
